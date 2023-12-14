@@ -1,6 +1,13 @@
 /* rem and em do NOT depand on html font-size in media queries!
 Instead , 1rem = 1em = 16px */
 
+@media (max-width: 63em) {
+  .heading-primary {
+    font-size: 4rem !important;
+  }
+}
+
+
 /* ************************************* */
 /* BELOW 1344px (Smaller desktops) */
 /* ************************************* */

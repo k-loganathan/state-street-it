@@ -2,7 +2,6 @@
 const h1 = document.querySelector(".heading-primary");
 console.log(h1);
 
-
 ///////////////////////////////////////////////////////////
 // Set current Year
 const yearEl = document.querySelector(".year");
@@ -160,3 +159,23 @@ function openForm() {
 function closeForm() {
   document.getElementById("enquiry-form").style.display = "none";
 }
+
+// **************
+// form
+
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbwJhyDMsv-B8ALbrw7XbsBqcYfY8CTIiz1uMOgvuRLAzskQGevqfMAZeg_PD4BxoSwYLw/exec";
+
+const form = document.forms["contact-form"];
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) =>
+      alert("Thank you! your form is submitted successfully.")
+    )
+    .then(() => {
+      window.location.reload();
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
