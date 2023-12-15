@@ -153,11 +153,23 @@ checkFlexGap();
 
 function openForm() {
   document.getElementById("enquiry-form").style.display = "block";
-  // document.getElementsByClassName("blur").style.display = "block";
 }
 
 function closeForm() {
   document.getElementById("enquiry-form").style.display = "none";
+}
+
+function opentqpopup() {
+  document.getElementById("enquiry-form").style.display = "none";
+}
+
+function opentqpopup() {
+  document.getElementById("thankyou-popup").style.display = "block";
+}
+
+function closeTq() {
+  document.getElementById("enquiry-form").style.display = "none";
+  document.getElementById("thankyou-popup").style.display = "none";
 }
 
 // **************
@@ -171,11 +183,20 @@ const form = document.forms["contact-form"];
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then((response) =>
-      alert("Thank you! your form is submitted successfully.")
-    )
-    .then(() => {
-      window.location.reload();
-    })
+    // .then((response) =>
+    //   alert("Thank you! your form is submitted successfully.")
+    // )
+    // .then(() => {
+    //   window.location.reload();
+    // })
     .catch((error) => console.error("Error!", error.message));
+});
+
+// **************
+// Pop Up
+
+window.addEventListener("load", function () {
+  setTimeout(function open(event) {
+    document.querySelector(".popup").style.display = "block";
+  }, 10000);
 });

@@ -35,10 +35,10 @@
     />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/queries.css" />
-    <link rel="stylesheet" href="css/new_queries.css" />
+    <link rel="stylesheet" href="css/general.css?version=2" />
+    <link rel="stylesheet" href="css/style.css?version=2" />
+    <link rel="stylesheet" href="css/queries.css?version=2" />
+    <link rel="stylesheet" href="css/new_queries.css?version=2" />
 
     <script
       type="module"
@@ -64,14 +64,39 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="#home">Home</a></li>
-          <li><a class="main-nav-link" href="#courses">Courses</a></li>
+
+          <li>
+            <a class="main-nav-link mobile-nav-course" href="#courses"
+              >Courses</a
+            >
+          </li>
+          <li class="disk-course-dropdown">
+            <div class="course-dropdown">
+              <button class="course-dropdown-btn main-nav-link">
+                Courses <i class="bi bi-chevron-down dropdown-icon"></i>
+              </button>
+              <div class="dropdown-contain">
+                <div class="course-dropdown-cont">
+                  <a href="#" class="course-dropdown-fullsta main-nav-link"
+                    >Full Stack Development</a
+                  >
+                </div>
+                <!-- <div class="course-dropdown-cont">
+                  <a href="#" class="course-dropdown-fullsta main-nav-link"
+                    >Full Stack Development</a
+                  >
+                </div> -->
+              </div>
+            </div>
+          </li>
+
           <li>
             <a class="main-nav-link" href="#testimonials">Testimonials</a>
           </li>
           <li><a class="main-nav-link" href="#aboutus">About Us</a></li>
           <li>
             <button onclick="openForm()" class="main-nav-link nav-cta">
-              Enquiry Now
+              Enquire Now
             </button>
           </li>
         </ul>
@@ -128,7 +153,7 @@
             </div>
             <div class="enquiry-btn">
               <button onclick="openForm()" class="btn btn--full enquiry-btn">
-                Enquiry Now
+                Enquire Now
               </button>
             </div>
           </div>
@@ -138,14 +163,14 @@
 
       <!-- Enquiry Form Box -->
 
-      <div class="blur" id="enquiry-form">
+      <div class="blur popup" id="enquiry-form">
         <section class="enquiry-form-section">
           <div class="enquiry-form-box">
             <button class="form-close-btn" onclick="closeForm()">
               <ion-icon class="close_form" name="close-outline"></ion-icon>
             </button>
             <div class="form-container">
-              <h2 class="heading-tertiary">Enquiry Now!</h2>
+              <h2 class="subheading-2">Book a Free Demo Class!</h2>
               <form
                 method="post"
                 action=""
@@ -198,7 +223,7 @@
                 </div>
 
                 <div>
-                  <input type="submit" />
+                  <input type="submit" onclick="opentqpopup()" />
                 </div>
               </form>
             </div>
@@ -211,6 +236,18 @@
               />
             </div>
           </div>
+        </section>
+      </div>
+
+      <div class="blur popup thankyou-contain" id="thankyou-popup">
+        <section class="thankyou-popup">
+          <h2 class="heading-tertiary thankyou-text">Thank You!</h2>
+          <p class="enquiry-description">
+            Your details has been successfully submitted!
+          </p>
+          <button type="button" onclick="closeTq()" class="btn thankyou-btn">
+            OK
+          </button>
         </section>
       </div>
 
@@ -456,7 +493,9 @@
 
             <ul class="social-links">
               <li>
-                <a class="footer-link" href="#"
+                <a
+                  class="footer-link"
+                  href="https://www.instagram.com/statestreetitofficial"
                   ><ion-icon
                     class="social-icon"
                     name="logo-instagram"
@@ -469,8 +508,10 @@
                 ></a>
               </li>
               <li>
-                <a class="footer-link" href="#"
-                  ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+                <a
+                  class="footer-link"
+                  href="https://www.linkedin.com/in/state-street-it-978a252a4/"
+                  ><ion-icon class="social-icon" name="logo-linkedin"></ion-icon
                 ></a>
               </li>
             </ul>
@@ -487,8 +528,8 @@
                 <a class="footer-link" href="tel:+91 63808 12149"
                   >+91 63808 12149</a
                 ><br />
-                <a class="footer-link" href="mailto:statestreetit2023@gmail.com"
-                  >statestreetit2023@gmail.com</a
+                <a class="footer-link" href="mailto:enquiry@statestreetit.com"
+                  >enquiry@statestreetit.com</a
                 >
               </p>
             </address>

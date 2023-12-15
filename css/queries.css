@@ -7,7 +7,6 @@ Instead , 1rem = 1em = 16px */
   }
 }
 
-
 /* ************************************* */
 /* BELOW 1344px (Smaller desktops) */
 /* ************************************* */
@@ -184,6 +183,23 @@ Instead , 1rem = 1em = 16px */
   .main-nav-link:visited {
     font-size: 3rem;
   }
+
+  .disk-course-dropdown {
+    display: none;
+  }
+
+  .mobile-nav-course {
+    display: block;
+  }
+
+  /* .course-dropdown-btn {
+    font-size: 3rem;
+  }
+
+  .dropdown-contain {
+    left: -20px;
+    top: 27px;
+  } */
 }
 
 /* ************************************* */
@@ -244,9 +260,9 @@ Instead , 1rem = 1em = 16px */
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .enquiry-form-box {
+  /* .enquiry-form-box {
     grid-template-columns: repeat(1, 1fr);
-  }
+  } */
 
   /* new */
   .enquiry-img-box {
